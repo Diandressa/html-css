@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bolder;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--Safe combination-->
+    <h1>Trabalhando com fontes</h1>
+    <p>Importante dizer que quando uma fonte tem duas palavras, como a Courier New, é necessário coloca-las entre aspas. Ex:</p>
+    <code>body {font-family:'Courier New';}</code>
+    <p>Veja o exemplo a seguir. É importante escolher fontes que tenham nos dispositivos. Por isso é inserido três opções no exemplo, se não houver a fonte Arial, irá ser utilizada a Helvetica, se não tiver a Helvetica será usada sans-serif (fontes sem serifas genéricas, ou seja, qualquer fonte sem serifa que o dispositivo tenha pode ser usada).</p> 
+    <p>Isso se aplica a outros categorias como serif, monospace, etc. Sempre termine sua declaração de fontes seguras com um genérico, tipo sans-serif ou serif:</p>
+    <pre>
+        <code>
+        &lt;style&gt;
+            body {
+                font-family:Arial, Helvetica, sans-serif
+            }
+        &lt;/style&gt;
+        </code>
+    </pre>
+    <p>Isso é chamado de safe combination. É possível pesquisar quais são as safe combination. Dê uma olhada em alguns safes conbinations no link a seguir: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp" target="_blank" rel="external">CSS Web Safe Fonts</a></p>
+
+    <!--Tamanho de fontes-->
+    <h2>Tamanhos de fontes</h2>
+    <p>Temos as medidas absolutas e as relativas.</p>
+    <ul>
+        <li>Medidas Absolutas: cm, mm, in (polegada), px, pt (ponto), pc (paica).</li>
+    </ul>
+    <p>As medidas absolutas não são indicadas para se trabalhar em telas. Ponto e paica são medidas da tipografia, no papel.</p>
+
+    <ul>
+        <li>Medidas Relativas: em, ex, rem, vw, vh, % </li>
+    </ul>
+    <p>São várias. O "em" é a medida relativa do tamanho atual da fonte (relativo ao tamanho do M maiuscúla da fonte), o "ex" é relativo à altura x de uma fonte, o rem é relativo à um tamanho fixo/raiz (r-> root) no body, temos tb o vw (viewwidth) sendo a largura em porcentagem da viewport (tamanho da minha tela), o vh é ralacionado à altura do viewport.</p>
+    <p><a href="https://tableless.com.br/unidade-pixels-em-rem/" target="_blank" rel="external">Site que explica fontes em px, em e rem</a></p>
+    <p><a href="https://desenvolvimentoparaweb.com/css/unidades-css-rem-vh-vw-vmin-vmax-ex-ch/#:~:text=Neste%20caso%2C%20usa%2Dse%20rem,quase%20sempre%20).&text=Em%20qualquer%20uma%20das%20div,tamanho%20equivalente%20de%2016.8px%20." target="_blank" rel="external">Site que explica o ex, vw, vh</a></p>
+    <p>As recomendações da w3schools é utilizar "em" ou "px" como medidas para fontes.</p>
+    <p>16px é o tamanho padrão de fontes. Equivale a 1em.</p>
+    <p>16px geralmente = 1em, logo<br>
+    2em = 32px</p>
+    <p>o rem é relacionado ao tamanho padrão fixado no body= 16px tb, porém é recomendado usar o "em".</p>
+
+    <!--Peso da fonte-->
+    <h2>Peso da fonte</h2>
+    <p>Usa a declação: <code>font-weight: normal;</code></p>
+    <p>Existem variações de pesos: lighter, normal, bold, bolder. Obs: nem todas as fontes vão ter todas as variações de pesos.</p>
+    <p>Outra variação é a numérica, começa em 100 e vai até 900: <code>font-weight: 100;</code></p></p>
+    
+    <!--Variações da fonte-->
+    <h2>Variações da fonte</h2>
+    <p>O font-style é para usar uma fonte em itálico: <code>font-style: italic;</code></p>
+    <p>Para o sublinhado utilizar: <code>text-decoration: underline;</code></p>
+
+    <!--Condensar declarações-->
+    <h2>Condensar declarações</h2>
+    <p>Para condensar declarações usa-se shorthand para fontes, o shorthand font</p>
+    <p>Ordem do shorthand font: -font-style -font-weight -font-size -font-family</p>
+    <p>Antes:</p>
+    <pre>
+        <code>
+        h1 {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            font-weight: bolder;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        </code>
+    </pre>
+    <p>Depois:</p>
+    <pre>
+        <code>
+            h1 {
+                font: italic bolder 3em Arial, Helvetica, sans-serif;
+            } 
+        </code>
+    </pre>
+</body>
+</html>

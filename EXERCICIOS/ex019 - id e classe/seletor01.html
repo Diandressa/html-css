@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seletores Personalizados</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="principal">Criando Sites com HTML</h1>
+    <h2 class="explicacao1">Usando o id com CSS</h2>
+    <p>Para mudar uma tag em especifico no css, você pode dar uma <span class="explicacao1 destaque">identificação*</span> pra ele:</p>
+    <pre>
+        <code>
+        &lt;h1 id="principal"&gt;
+        </code>
+    </pre>
+    <p>No CSS externo coloca:</p>
+    <pre>
+        <code>
+        h1#principal {
+            
+        }
+        </code>
+    </pre>
+    <p>Em HTML é id = em CSS é # (cerquilha)/ Só pode um elemento<br>
+    Em HTML é class = em CSS é . (ponto)/ Pode vários elementos</p>
+    <p>Dentro de um arquivo HTML só se pode ter um elemento com id. Por exemplo, se vc já usou id="principal" em um h1, você não pode usar o id="principal" em outro h1. (funciona, mas não é recomendado)</p>
+    <p class="destaque">*<a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/span">&lt;span&gt;</a>: O elemento HTML &lt;span&gt; é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos class ou id ).</p>
+    <h2 class="explicacao2">Usando Class</h2>
+    <p>Quando você quer aplicar a mesma formatação em dois elementos aos mesmo tempo basta usar <code>class</code>. Você pode ter vários elementos com a mesma classe:</p>
+    <pre>
+        <code>
+        &lt;h1 class="explicacao1"&gt;Teste 1&lt;/h1&gt;
+        &lt;h1 class="explicacao2"&gt;Teste 2&lt;/h1&gt;
+        &lt;h1 class="explicacao3"&gt;Teste 3&lt;/h1&gt;
+
+        &lt;h1 class="explicacao1"&gt;Teste 4&lt;/h1&gt;
+        &lt;h1 class="explicacao2"&gt;Teste 5&lt;/h1&gt;
+        &lt;h1 class="explicacao3"&gt;Teste 6&lt;/h1&gt;
+        </code>
+    </pre>
+    <p>Nomeie o class conforme sua função e não sua forma. Ex: Título em verde: Curso básico, então seria lógico nomear o class como básico e não como verde.</p>
+    <p>Não coloque acentos nos class.</p>
+    <p>Aplicação no CSS (não precisa colocar o nomes, h1, h2...):</p>
+    <pre>
+        <code>
+        .explicacao1 {
+
+        }
+
+        .explicacao2 {
+
+        }
+
+        .explicacao3 {
+
+        }
+        </code>
+    </pre>
+    <h2 class="explicacao3">Usando dois class na mesma tag.</h2>
+    <p>Podemos usar dois class na mesma tag dessa forma: </p>
+    <pre>
+        <code>
+            &lt;h1 class="explicacao1 destaque"&gt;Teste 1&lt;/h1&gt;
+        </code>
+    </pre>
+    <p>No CSS:</p>
+    <pre>
+        <code>
+            .explicacao1 {
+            color: red;
+            }
+
+            .destaque {
+            backgound-color: white;
+            }
+        </code>
+    </pre>
+    <h1>Aprendendo CSS</h1>
+    <h2 class="explicacao1">Podemos ter uma id e um class</h2>
+    <p>Podemos usar um id e um class em uma mesma tag, porém o id sobrepoe.</p>
+    <pre>
+        <code>
+            &lt;h1 id="principal" class="explicacao1 destaque"&gt;Teste 1&lt;/h1&gt;
+        </code>
+    </pre>
+    <p>O id tb sobrepoe as formatação do h1 no css</p>
+    <h2 class="explicacao2">CSS intermediário</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quasi officiis. Tempora obcaecati aspernatur itaque, quibusdam, eum nostrum, architecto aliquid tenetur deserunt aut natus. Ea sed ducimus sit accusamus adipisci?</p>
+    <h2 class="explicacao3">CSS avançado</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quasi officiis. Tempora obcaecati aspernatur itaque, quibusdam, eum nostrum, architecto aliquid tenetur deserunt aut natus. Ea sed ducimus sit accusamus adipisci?</p>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            /*border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;*/
+
+            border: 10px solid darkslategray;
+
+            /*padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;*/
+
+            padding: 10px 20px;
+
+            /*margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;*/
+
+            margin: 20px 20px 40px 20px;
+
+            /*outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;*/
+
+            outline: 5px dashed salmon;
+        }
+
+        a { /* inline-level */
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+    <p>Podemos abrir o DevTools no nosso navegador</p>
+    <p>User agent é o meu navegador, ele faz confirações de estilo automáticas, como vemos no exemplo do h1.</p>
+    <p>O elemento <em>dispaly: block;</em> me diz que esse elemento é um box-level.</p>
+    <p>Podemos transformar um display block em inline ou vice-versa (elemento inline não dá pra definir altura e largura porque ele está numa linha):</p>
+    <pre><code>
+    display: inline/block;
+    </code></pre>
+    Também podemos transforma-lo em inline-block. Ele continua na linha, mas terá algumas caracteristicas de bloco, ou seja, podemos definir altura e largura:
+    <pre><code>
+    display: inline-block;
+    </code></pre>
+    <h2>Padding</h2>
+    <p>A ordem do padding é horário:</p>
+    <pre><code>
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    </code></pre>
+    <h2>Borda</h2>
+    <p>Na borda definimos uma largura, um estilo e uma cor:</p>
+    <pre><code>
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    </code></pre>
+    <h2>Margin</h2>
+    <p>Em margens podemos definir margens no top, direita, baixo e esquerda seguindo essa ordem respectivamente:</p>
+    <pre><code>
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-left: 40px; 
+    </code></pre>
+    <p>Para centraliza caixas na horizontal podemos usar o margin: auto;</p>
+    <h2>Outline</h2>
+    <p>O outline fica entre a borda e a margem (mais ainda dentro da margem). Por exemplo se temos uma margem de 20px podemos pegar metade disso e fazer um tracejado de 5px dentro da marge.</p>
+    <img src="outline.png" alt="outline" width="400px">
+    <p>No outline seguimos o modelo da borda:</p>
+    <pre><code>
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color: salmon;
+    </code></pre>
+    <h2>Shorthands</h2>
+    Podemos simplificar as propriedades usando shorthands, que são propriedades de múltiplo valores.
+    <h3>Shorthand border</h3>
+    <p>Seguimos a ordem width, style, color:</p>
+    <pre><code>
+    border: 10px solid darkslategray;
+    </code></pre>
+    <h3>Shorthand padding</h3>
+    <p>Seguimos a ordem top, right, bottom, left:</p>
+    <pre><code>
+    padding: 10px 10px 10px 10px;
+    </code></pre>
+    <p>Se as 4 forem iguais, basta informar uma unica vez:</p>
+    <pre><code>
+    padding: 10px;
+    </code></pre>
+    <p>Podemos colocar só 2 valores, quando faço isso significa que o primeiro valor é referente ao top e bottom e o segundo à right e left:</p>
+    <pre><code>
+    padding: 10px(top/bottom) 20px(right/left);
+    </code></pre>
+    <h3>Shorthand margin</h3>
+    <p>Seguimos a ordem top, right, bottom, left:</p>
+    <pre><code>
+    margin: 20px 20px 40px 20px;
+    </code></pre>
+    <p>Podemos colocar um ou dois valores seguindo o mesmo esquema que o shorthand border.</p>
+    <p>Se eu quiser centralizar a margem da esquerda e da direita eu posso usar o auto:</p>
+    <pre><code>
+    margin: 20px auto 40px auto;
+    </code></pre>
+    <h3>Shorthand outline</h3>
+    <p>Seguimos a ordem width, style, color:</p>
+    <pre><code>
+    outline: 5px dashed salmon;
+    </code></pre>
+</body>
+</html>

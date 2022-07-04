@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, scale-initial=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial {
+            background-color: whitesmoke;
+        }
+
+        .especial::before {
+            content: '❀ ';
+        }
+        .especial::after {
+            content:' ❀';
+        }
+        
+        p.indentação {
+            text-indent: 30px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Personalizando Links</h1> 
+   <ul>
+       <li><a href="http://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+       <li><a href="http://youtube.com/cursoemvideo/" target="_blank" class="especial">Canal do Youtube</a></li>
+       <li><a href="http://www.cursoemvideo.com" target="_blank">Site do CursoemVideo</a></li>
+   </ul>
+   <h1>Pseudo-classes usados</h1>
+   <p>No exemplo acima o a estilazação usa pseudo-classes. Uma pseudo-classe é usado para dizer que aquele elemento vai ter um estado específico e que pode ser estilizado quando tiver em certo estado:</p>
+   <pre><code>
+       &lt;style&gt;
+
+    <strong>body</strong> {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    <strong>a</strong> {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    <strong>a:visited</strong> {
+        color: darkred;
+    }
+
+    <strong>a:hover</strong> {
+        color: black;
+        text-decoration: underline;
+    }
+
+    <strong>a:active</strong> {
+        color: yellow;
+    }
+       &lt;/style&gt;
+
+   </code></pre>
+   <h1>Pseudo-elemento</h1>
+   <p>Um pseudo-elemento permite que você estilize uma parte especifica de um elemento selecionado, você pode usar os pseudo-elementos junto as classes:</p>
+   <pre><code>
+    &lt;style&gt;
+
+    .especial {
+        background-color: whitesmoke;
+    }
+
+    .especial::before {
+        content: '❀ ';
+    }
+    .especial::after {
+        content:' ❀';
+    }
+
+    &lt;/style&gt;
+   </code></pre>
+   <h1>Revisão: Seletores Personalizados</h1>
+   <p class="indentação"># = id</p>
+   <p class="indentação">. = class</p>
+   <p class="indentação">: = pseudo-class</p>
+   <p class="indentação">:: = pseudo-element</p>
+   <p class="indentação">> = children </p>
+</body>
+</html>

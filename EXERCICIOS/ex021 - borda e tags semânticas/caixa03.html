@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda personalizada</title>
+    <style>
+        h1 {
+            border: 20px solid transparent;
+            padding: 10px;
+            /*border-image-source: url("borda.png");
+            border-image-slice: 27;
+            border-image-repeat: repeat;*/
+
+            border-image: url('borda.png') 27 repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Borda Personalizada</h1>
+    <p>Usamos no estilo a propriedade <strong>border-image-source: url ('')</strong>. A borda fica assim:</p>
+    <img src="img1.png" alt="borda antes de fatiar">
+    <p>Repetimos a imagem com o parâmetro <strong>border-image-repeat</strong> com o valor repeat (temos o valor stretch que estica a bolinha).</p>
+    <p>Agora precisamos fatiar. Usamos a propriedade <strong>border-image-slice</strong> e inserimos um número qualquer, depois vamos no DevTools ajustamos e copiamos e colomos os valores no nosso código.</p>
+    <p>Podemos usar um shorthand com o <strong>border-image</strong> na ordem: border-image-source, border-image-slice e border-image-repeat.</p>
+    <pre><code>
+        border-image: url('borda.png') 27 repeat;
+    </code></pre>
+    <p>Obs: Não podemos tirar o parâmetro boder (1px solid transparent), se tirarmos não irá funcionar o border-image. Nem todos os navegadores são compatíveis com o border-image.</p>
+</body>
+</html>

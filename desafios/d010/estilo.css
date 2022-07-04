@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: idroid;
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #84E1AD;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+header {
+    padding: 30px 10px;
+    height: 150px;
+    margin: auto;
+    background-image: linear-gradient(to bottom, #3BD17F, #1A5C38);
+    color: white;
+}
+
+header h1 {
+    text-align: center;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+header p {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+nav a {
+
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    margin: auto;
+    background-color: white;
+    width: 831px;
+    height: 100%;
+    box-shadow: 0px 0px 8px #53615D;
+    padding-bottom: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+h2 {
+    padding: 15px;
+    font-family: idroid;
+    color: #154b2d; 
+}
+
+span, main a {
+    font-weight: bold;
+    color: #154b2d;
+    text-decoration: none; 
+}
+
+main p {
+    padding: 15px;
+    text-indent: 40px;
+}
+
+main h3 {
+    margin: 5px 15px;
+    color: #154b2d; 
+    font-family: idroid;
+    background-image: linear-gradient(to right, #84E1AD, transparent);
+}
+
+picture img, img {
+    display: block;
+    margin: auto;
+    padding: 15px;
+}
+
+.video {
+    background-color: #154b2d;
+    padding: 15px 40px;
+}
+
+.titulo-box {
+    color: white;
+    font-weight: bold;
+    background-color: #39a367;
+    padding: 10px;
+    margin: 15px 15px 0 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.titulo-box2 {
+    background-color: #aae0c2;
+    padding: 10px;
+    margin: 0px 15px 15px 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+ul {
+    width: 150px;
+    list-style: none;
+    display: inline-block;
+    margin-right: 190px;
+}
+
+footer {
+    background: #154b2d;
+    color: white;
+    margin-top: 15px;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8em;
+}

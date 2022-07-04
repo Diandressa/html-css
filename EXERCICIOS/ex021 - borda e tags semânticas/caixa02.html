@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+</head>
+<body>
+    <h1>Grouping Tags/ Tags de agrupamento</h1>
+    <p>Temos duas tags de agrupamento, a <strong>div (box-level)</strong> e o <strong>span (inline-level)</strong>.</p>
+    <p>Antigamente era muito usado div com id tipo cabeçalho, menu, etc. Isso fazia o documento ter várias divs dentro da outra.</p>
+    <p>Porém no html5 existem agrupamentos de tag (grouping tags) semânticas. Tráz vantagens na organização do meu conteúdo e também ajuda os mecânismos de busca.</p>
+    <p>Todo site tem um cabeçalho (header), um conteúdo principal (main) e um rodapé (footer).</p>
+    <pre><code>
+    &lt;body&gt;
+        <strong>&lt;header&gt;</strong>
+            &lt;h1&gt;Meu site&lt;/h1&gt;
+            &lt;nav&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+                &lt;a href="#"&gt;Link&lt;/a&gt;
+            &lt;/nav&gt;
+        <strong>&lt;/header&gt;</strong>
+
+        <strong>&lt;main&gt;</strong>
+
+            &lt;saction id="assunto"&gt;
+                &lt;article&gt;
+                    &lt;aside&gt;
+
+                    &lt;/aside&gt;
+                &lt;/article&gt;
+            &lt;/saction&gt;
+
+            &lt;saction id="noticias&gt;
+
+                &lt;article&gt;
+
+                    &lt;h2&gt;Nóticia sobre ..&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium exercitationem sit quidem, necessitatibus sed inventore, tenetur 
+                    facere dolorem cupiditate reprehenderit iste, quo aspernatur architecto nihil rem optio quis! Totam, cum?&lt;/p&gt;
+
+                    &lt;aside&gt;
+                        &lt;p&gt;Artigo escrito por.. (podemos colocar o nome do autor)&lt;/p&gt;
+                    &lt;/aside&gt;
+
+                &lt;/article&gt;
+                
+            &lt;/saction&gt;
+
+        <strong>&lt;/main&gt;</strong>
+
+        <strong>&lt;footer&gt;</strong>
+            Desenvolvido pelo CursoemVideo.
+        <strong>&lt;/footer&gt;</strong>
+    &lt;/body&gt;
+    </code></pre>
+    <p>Pra o menu dentro de um cabeçalho utilizamos o <strong>nav</strong> (navegação).</p>
+    <p>Dentro do main podemos ter uma seção <strong>section</strong>. Temos também o <strong>article</strong> (artigo) que é o artigo dentro de uma seção. O <strong>aside</strong> é um contéudo periférico/relativo ao artigo.</p>
+    <p>Depois é só formatar cada grouping tag com css. Veja <mark><a href="meusite.html">o site formatado aqui</a></mark> usando esses agrupamento de tags.</p>
+</body>
+</html>

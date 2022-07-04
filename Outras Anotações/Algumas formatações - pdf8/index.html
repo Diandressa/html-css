@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatações de textos</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!--Texto sobre a semântica-->
+   <h1>Algumas formatações de textos</h1> 
+   <h2>Semântica</h2>
+    <p>No antigo HTML4 algumas tags representavam apenas formas, como &lt;b&gt;, &lt;u&gt; e &lt;blink&gt;. Não havia um motivo pra usá-las, era somente estético. Atualmente, no HTML5, a semântica (significado) é mais valorizada e não a forma (estética) que passou a ser configurado pelo CSS. Sendo assim, em HTML5, vemos os chamados HTML semântico ou tags semânticas ou ainda conteúdo semântico.</p> 
+    <p>Você pode ver as tags obsoletes (em desuso) no site da w3. <br>
+    &#9679
+    <a href="https://dev.w3.org/html5/pf-summary/obsolete.html">w3 - 13 Obsolete features </a><br>
+    &#9679
+    <a href="https://www.w3.org/TR/2014/REC-html5-20141028/obsolete.html">w3 - 11 Obsolete features </a>
+    </p>
+    <!--Texto sobre negrito e itálico-->
+   <h2>Negrito e Itálico</h2>
+    <p>A tag &lt;strong&gt; significa que o texto delimitado possui força dentro da frase e aparecerá em <strong>negrito</strong>.</p>
+    <p>Já a tag &lt;em&gt; significa que queremos dar ênfase <em>(do Inglês emphasis)</em> ao termo. Logo, aparecerá em <em>itálico</em></p>
+    <!--Texto sobre marca texto-->
+    <h2>Marcar texto</h2>
+    <img src="marca texto 50px.png" alt="imagem de um marca texto">
+    <p>Se quer uma ênfase descomunal para um trecho valioso do texto, use a tag &lt;mark&gt;..&lt;/mark&gt; <mark>exemplo</mark></p>
+    <!--Texto sobre tag big e small-->
+    <h2>Big e small</h2>
+    <p>a tag &lt;big&gt; não se usa mais, porém &lt;small&gt; ainda sobrevivi. <small>o texto fica pequeninho .. viu?</small> </p>
+    <!--Texto sobre textos deletados-->
+    <h2>Texto deletado</h2>
+    <p>Antigamente utilizava-se a tag &lt;strike&gt; hoje não mais entre nós. Agora se usa o &lt;del&gt; que significa que o texto que está ali <del>pode ser lido, mas deve ser desconsiderado pelo leitor.</del></p>
+    <!--Texto sobre textos inseridos-->
+    <h2>Texto inserido</h2>
+    <p>É o oposto do texto deletado. Se colocarmos um texto dentro de &lt;ins&gt; e &lt;/ins&gt;, estamos dizendo que <ins>o texto que está ali, deve ser lido e você deve prestar atenção nele.</ins> (antigamente era usado a tag &lt;u&gt; para sublinhar um texto</p>
+    <!--Texto sobre sobrescritos e subscritos-->
+    <h2>Textos sobrescrito e subscrito</h2>
+    <p>Para escrever x2 ou um H20 corretamente, basta usar as tags &lt;sub&gt; e &lt;sup&gt;. E então o texto ficará assim: x<sup>2</sup> e H<sub>2</sub>O</p>
+    <!--Texto sobre textos com trechos de códigos-fontes-->
+    <h2>Trechos de código</h2>
+    <p>Para compartilhar o escrever códigos-fontes existe a tag &lt;code&gt; onde você pode delimitar seu código. Além de deixar as letras no modo mono-espaçadas, ela traz a principal vantagem que é o valor semântico, indicando ao navegador que se trata de um código de computador.</p> 
+    <p>Para deixar o texto igual a forma que você digitou, incluindo quebras de linhas, espaços e tubulações é necessário usar o &lt;code&gt; dentro da tag &lt;pre&gt;. Vejo um exemplo:</p>
+    <pre>
+        <code>
+        num = int (input('Digite um número'))
+        if num %2==0:
+            print(f'0 número {num} é par')
+        else:
+            print(g'0 número {num} é ímpar')
+        print(h'FIM DO PROGRAMA')
+        </code>
+    </pre>
+    <!--Texto sobre citações-->
+    <h2>Citações</h2>
+    <p>Pra fazer citações no meio de um parágrafo usamos a tag &lt;q&gt; do inglês <em>quote</em>. <q>Esse é um exemplo</q></p>
+    <p>Porém para citações mais longas (em bloco) que tem um parágrafo só para si, colocamos tudo dentro de &lt;blockquote&gt; e &lt;/blockquote&gt; fazendo o texto ganhar um recuo automaticamente. Exemplo abaixo:</p>
+    <blockquote>
+        Anakin Skywalker foi um Humano sensível à Força, que logo se tornou um Cavaleiro Jedi da República Galáctica ao ser considerado o Escolhido da Força.
+    </blockquote>
+    <p>Podemos também colocar um link para o texto original, usando o parâmetro <em>cite</em> dentro da tag. *Só específica para o caso do Google achar pelo algoritimo dele, se você quiser que funcione como um link vc precisa usar o tag &lt;a&gt;.Observe:</p>
+    <blockquote cite="https://starwars.fandom.com/pt/wiki/Anakin_Skywalker">
+        Anakin Skywalker foi um Humano sensível à Força, que logo se tornou um Cavaleiro Jedi da República Galáctica ao ser considerado o Escolhido da Força.
+    </blockquote>
+    <!--Texto sobre abreviações-->
+    <h2>Abreviações</h2>
+    <p>Essa é uma novidade da HTML5. Sempre que você escrever uma sigla e quiser deixar claro ao usuário (e aos mecanismos de busca) o significado dela, use a tag &lt;abbr&gt; com parâmetro title para indicar o significado da sigla. Veja:
+    </p>
+    <p>&lt;p&gt;Eu estou estudando &lt;abbr title="Hyper Text Markup Langaue&gt;HTML&lt;/abbr&gt; para criar sites.&lt;/p&gt;</p>
+    <p>Quando passamos o mouse sobre a sigla abreviada, um pequeno texto aparece com o seu significado. <br><br> Aplicação: <br>
+    Eu estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr>para criar sites.</p>
+    <!--Texto sobre textos invertidos-->
+    <h2>Texto Invertido</h2>
+    <p>Para deixar um título ou um texto invertido use a tag &lt;bdo&gt;. <abbr title="bi-directional override/substituição bidirecional">BDO</abbr> significa bi-directional override. Ao usar essa tag coloque também o parâmetro <code>dir</code> para iniciar uma das duas direções possíveis:</p>
+    <p><code>rtl</code> = da direita para a esquerda (right-to-left)<br>
+    <code>ltr</code> = da esquerda para a direita (left-to-right)</p>
+    <p>&lt;h2&gt;Texto Invertido&lt;/h2&gt;<br>
+    &lt;bdo dir="rtl"&gt;Este texto todo está invertido no formato RIGHT-TO-LEFT.&lt;/bdo&gt;</p>
+    <p><strong>Aplicação:</strong> <br>
+    Invertido <abbr title="right-to-left">rtl</abbr> <br>
+    <bdo dir="rtl">Este texto todo está invertido no formato RIGHT-TO-LEFT</bdo></p>
+    <p>Invertido (jeito que lemos) <abbr title="left-to-right">ltr</abbr><br>
+    <bdo dir="ltr">Este texto todo está invertido no formato LEFT-TO-RIGHT</bdo></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagem dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplismente aumente e diminua o tamanho do seu navegador.</p>
+    <p>Usa-se a tag <em>picture</em> e <em>source media</em></p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">
+    </picture>
+    <p>Irá carregar a imagem selecionada, porém se no max-width eu colocar 1000px significa que meu navegador suporta uma imagem de no máximo 1000px, se meu navegador for menor que isso eu posso carregar outra foto menor colocando ela no srcset. Colocar o tipo na imagem no type. Podemos colocar 1050px pra não aparecer a barra de rolagem.</p>
+    <p>Para carregar outra imagem menor ainda colocar neceriariamente outro source media acima do da imagem média. A ordem é da imagem menor para a maior.</p>
+    <!--audio-->
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5. Usa-se a tag &lt;audio src&gt;:</p>
+    <audio src="midia/BTS – Blanket Kick.mp3" autoplay controls></audio>
+    <p>Usar os parâmetros <em>controls</em> (para aparecer controles de aúdio) e <em>autoplay</em></p>
+    <p>O autoplay não funcionou, depende do navegador ou da extenção do arquivo.</p>
+    <p>Outro forma de inserir um áudio é usanso a tag <em>audio</em>, sem o src. Posteriormente abra a tag &lt;source src="arquivo do audio.mp3" type="audio/tipo"&gt;. Alguns valores de type estão no material em pdf do curso.</p>
+    <audio>
+        <source src="midia/BTS – Blanket Kick.mp3" type="audio/mpeg">
+    </audio>
+    <p><small>Obs: Você pode colocar o aúdio nas três extenções possíveis caso o navegador não leia alguma extenção específica. As extenções de audio possíveis são mp3, ogg e wav. Caso o navegador não reconheça nehuma das opções você pode deixar um link para download como no exemplo abaixo:</small></p>
+    <audio preload="metadata" controls loop>
+        <source src="midia/BTS – Blanket Kick.mp3" type="audio/mpeg">
+        <source src="midia/BTS – Blanket Kick.ogg" type="audio/ogg">
+        <source src="midia/BTS – Blanket Kick.wav" type="audio/wav">
+    </audio>
+    <p><a href="midia/BTS – Blanket Kick.mp3" download="BTS – Blanket Kick.mp3" type="	audio/mpeg">Clique aqui para baixar o arquivo MP3</a></p>
+    <p>Existe alguns parâmetros de áudio como o <em>preload</em>. O valor <em>auto</em> do parâmetro <em>preload</em> pode ser perigoso pois o navegador só vai carregar a página depois de carregar o aúdio inteiro e existem aúdios grandes e pesados (32KB já é pesado pra um celular por exemplo). O valor <em>metadata</em> carrega somente o nome do arquivo e algumas informações (data/duração). Já o none não carrega nada, só quando o usuário apertar o play.</p>
+    <p>O parâmetro <em>loop</em> irá recomeçar o áudio quando ele acabar.</p>
+    <p><small>A extenção wav é bem pesado.</small></p>
+ </body>
+</html>

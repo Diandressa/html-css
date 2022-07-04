@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width device width, initial-scale=1.0">
+    <title>Outras formatações</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+    <p>Usa-se a tag &lt;code&gt; no texto código, uma fonte mono-espaça (com espaços iguais entre cada letra) deixa claro o significado daquele texto como um código.</p>
+    <code>
+        num = int(input('Digite um número'))
+        if num % 2 == 0:
+            print(f'O número {num} é PAR')
+        else: 
+            print(f'O número {num} é ÍMPAR')
+        print('Fim do programa')
+    </code>
+    <p>O código acima ficou sem os espaçamentos (indentação) igual ao digitado, para resolver isso é necessário colocar a tag &lt;code&gt; dentro da tag &lt;pre&gt;. Aí o código ficará dessa forma:</p>
+    <pre>
+    <code>
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else: 
+        print(f'O número {num} é ÍMPAR')
+    print('Fim do programa')  
+    </code>
+    </pre>
+    <p><mark>Para tirar os espaçamento (de todas as linhas ao mesmo tempo) basta selecionar o código e dar shift + tab</mark></p>
+    <h2>Citações simples (entre o texto)</h2>
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q></p>
+    <p>Para citação podemos usar a tag <abbr title="quote">&lt;q&gt;</abbr>.</p>
+    <h2>Citações completas (em um parágrafo)</h2>
+    <p>Segundo Mestre Yoda:</p>
+    <blockquote cite="https://www.wizard.com.br/cultura/as-10-frases-mais-marcantes-da-saga-star-wars/">
+        <strong>Luke, you're going to find that many of the truths we cling to depend greatly on our own point of view.</strong><br>
+        <em>Luke, você descobrirá que muitas das verdades às quais nos prendemos dependem do nosso ponto de vista.</em>
+    </blockquote>
+    <p>Podemos usar o parâmetro <em>cite</em> na tag blockquote para colocar o link onde encontramos o texto original. Não é visual, se trata da parte interna do site, para dizer aos mecanismo de busca a fonte original, assim, mantendo os direitos do autor.</p>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou achando interessante.</p>
+    <p>Usa-se a tag <em>abbr</em> + o parâmetro <em>title</em> para inserir um texto com o significado da sigla (ao passar o mouse).</p>
+    <h2>Texto invertido</h2>
+    <p>Para fazer um texto invertido usa-se a tag <em>bdo + o parâmetro dir</em>:</p>
+    <p><bdo dir="rtl">Estou aprendendo a cria coisas em HTML.</bdo></p>
+</body>
+</head>
+</html>

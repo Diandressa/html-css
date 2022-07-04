@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta nema="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Rose';
+            src: url('fonts/Rose Cake.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Rose', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes Externas</h1>
+    <p>Faça download da fonte desejada. Coloque a regra/seletor especial font-face no style:</p>
+    <pre>
+        <code>
+        @font-face {
+            font-family: 'nome que preferir';
+            src: url('Rose Cake - Personal Use.otf') format('opentype'), url('Rose Cake - Personal Use.ttf') format ('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        </code>
+    </pre>
+    <p>Se tiver o arquivo.ttf e .otf pode colocar os dois, tem navegador que funciona melhor com ttf e outros com otf</p>
+    <h1>Tipos de formatos</h1>
+    <p>Você pode colocar o formato. Os tipos de formatos são:</p>
+    <ul>
+        <li>opentype (otf)</li>
+        <li>truetype (ttf)</li>
+        <li>embedded-opentype (eot)</li>
+        <li>truetype-aat (Apple Advanced Typografy)</li>
+        <li>svg</li>
+    </ul>
+    <p>Lembre-se de colocar o valor das propriedades font-weight e font-style de acordo com a font que você está importando. Assim o browser não tenta ficar emular o peso da font.</p>
+    <h1>Local</h1>
+    <p>Para informar ao navegador que ele deve, antes de baixar a fonte, verificar se ela existe no sistema local do usuário usamos o valor local no descritivo src. Observe a seguir:</p>
+    <pre>
+        <code>
+            @font-face {
+                font-family: "RegencyScriptFLF Regular";
+                src: local("RegencyScriptFLF-Regular"), url("https://site/fontes/RegencyScriptFLF-Regular.ttf");
+                }
+        </code>
+    </pre>
+</body>
+</html>

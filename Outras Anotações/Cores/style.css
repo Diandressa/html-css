@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+h1 {
+    color: rgb(255, 242, 244);
+    background-color: rgb(230, 105, 105);
+}
+
+p {
+    text-align: justify;
+}
+
+a:link {
+    color: #F07167;    
+}
+
+a:visited {
+    color: #00AFB9;    
+}
+
+a:hover {
+    color: #FED9B7;
+}
+
+img {
+    width: 350px; 
+    }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores em CSS</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--Representação por nomes-->
+    <h2 style="background-color: blue; color: white">Exemplo de Cores - Usando nomes</h2>
+    <p>Representação de cores usando nomes. Ex: style="background-color: blue; color: white"</p>
+
+    <!--Representação por códigos Hexadecimais-->
+    <!--Decimal: 0 1 2 3 4 5 6 7 8 9-->
+    <!--Hexadecimal (são 16/hexa): 0 1 2 3 4 5 6 7 8 9 A B C D E F-->
+    <h2 style="background-color: #0000ff; color: #ffffff">Usando representação hexadecimal</h2>
+    <p>Representação de cores usando códigos hexadecimais. O decimal são 10 algorítimos: 0 1 2 3 4 5 6 7 8 9. Já os hexadecimais são 16 algorítimos (hexa): 0 1 2 3 4 5 6 7 8 9 A B C D E F. Utiliza # antes do cógigo. Os dois primeiros digitos representam o vermelho (red), em seguido os dois próximos representam o verde (green) e os dois últimos o azul (blue) RGB. O valor mínimo é 00 e o máximo é ff. Ex: style="background-color: #0000ff; color: #ffffff"</p>
+
+    <!--Representação em RGB-->
+    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255)">Usando representação RGB (red, green, blue)</h2>
+    <p>Podemos usar a representação RGB. O valor máximo é 255. Ex: style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255)"</p>
+
+    <!--Representação em HSL-->
+    <h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%)">Usando representação HSL (hue, saturation, lightness</h2>
+    <p>Podemos usar a representação HSL. H é hue (matiz), S é saturation (saturação) e L é lightness (luminância). Ex: style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%)"</p>
+
+    <!--Representação usando as ferramentas do VScode (RGB)-->
+    <h2 style="background-color: rgba(34, 34, 34, 0.651); color: rgb(43, 196, 235)">Usando representação HSL (hue, saturation, lightness</h2>
+    <p>Podemos usar as ferramentas do VScode para facilitar a escolha da cor. Ex: style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255)". É só passar o mouse em cima do quadrado da cor ou do nome e escolher a cor, a trasparência e a tonalidade dela.</p>
+    <p>Para mudar a representação de RGB para outro como Hexadecimal é só clicar, depois de passar o mouse em cima do quadrado ou do nome da cor, na barra onde está escrito rgb (0, 0, 255).</p>
+    <p>Ao adicionar transparência no sistema RGB, ele se torna rgba, no qual o a significa alpha (transparência). O mesmo se aplica ao HSL, que se torna hsla.</p>
+</body>
+</html>

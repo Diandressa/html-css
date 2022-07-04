@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trabalhando com links</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <p>Usamos o parâmetro target e rel(relativo à). No caso acima foi usado o valor _blank (em branco) pro target e o valor external (link externo) pro rel.</p>
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/">canal no Youtube</a></p>
+    <!--Links Internos-->
+    <h1>Usando links internos</h1>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" target="_self" rel="next">segunda página (sobre nofollow)</a></p>
+    <p>Nos links internos não se usa internal e sim next no parâmetro rel e prev (previous/anterior) na segunda</p>
+    <p>Visualmente não acontece nada, mas diz pros mecanismos de busca qual é a próxima página</p>
+    <hr>
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self" rel="next">página de notícias</a> (sobre ./ e ../ navegação entre pastas)</p>
+    <p>Usa para nevegar em links na sua própria página a tag target com valor <em>_self</em></p>
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+    <p>Pode colocar <em>#</em> no parâmetro <em>href</em> quando ainda não tiver link, ele significa link vazio</p>
+    <p>Dependendo do navegador o link só abre em outra aba. Para isso colocar o parâmetro <em>download</em> e como valor inseri o nome do arquivo que será feito o download.</p>
+    <p>Colocar também o parâmetro type e o valor "application/pdf"</p>
+    <p>Existe uma lista com os valore de type:<br>
+    <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">https://www.iana.org/assignments/media-types/media-types.xhtml</a></p>
+</body>
+</html>

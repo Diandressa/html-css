@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "NewTegomin";
+    src: url("fonts/NewTegomin-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    }
+        h1 {
+        font-family: "NewTegomin", Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+
+    body {
+        font: bolder 1em "NewTegomin", Arial, Helvetica, sans-serif;
+        }
+
+    a:link {
+        color: darkcyan;
+    }
+
+    a:visited {
+        color: blueviolet;
+    }
+
+    a:hover {
+        color:chartreuse;
+    }

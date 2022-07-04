@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(212, 212, 212);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: darkred;
+}
+
+h1#principal {
+    text-align: center;
+    background-color: darkred;
+    color: white;
+}
+
+h2 {
+    color: darkcyan
+}
+
+.explicacao1 {
+    color: darkcyan;
+}
+
+.explicacao2 {
+    color: rebeccapurple;
+}
+
+.explicacao3 {
+    color: hotpink;
+}
+
+.destaque {
+    color: maroon;
+    background-color:mintcream;
+}

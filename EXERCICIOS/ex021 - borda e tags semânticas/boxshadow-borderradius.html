@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-shadow e Border-radius</title>
+</head>
+<body>
+    <h1>Box-shadow/ Sombra nas caixas</h1>
+    <a href="meusite.html">Site que colocamos a sombra</a>
+    <p>Usaremos o shorthand da sombra, pois é mais rápido e simples. Usamos o box-shadow, o primeiro valor é o deslocamento horizontal, o segundo o vertical, o terceiro o espalhamento e o último a cor da sombra:</p>
+    <pre><code>
+    box-shadow: 1px 1px 1px black;
+    </code></pre>
+    <h2>Observação</h2>
+    <p>No footer ao colocar o padding de 1px ele considera a margin do parágrafo mais o padding. Podemos tirar essa margin padrão do parágro dentro do footer da seguinte forma:</p>
+    <pre><code>
+    footer > p {
+        margin: 0;
+    }
+    </code></pre>
+    <h2>Dica - Inset/Blur e DevTools</h2>
+    <p>Podemos criar uma box-shadow no Devtools no navegador. Primeiro vá na seleção de estilo desejada (no nosso caso é o nav) no DevTools, no box-shadow clique no icone quadradinho para criar uma sombra. <p>
+    Depois copia e cole os valores no seu código.
+    </p> Podemos coloca sombras inset, que é a sombra dentro da caixa e a outset que é fora. Também podemos definir um spread que é o tamanho/espalhamento e o blur que é o borrão nessa sombra:</p>
+    <pre><code>
+    box-shadow: inset 7px(horizontal/x) 6px(vertical/y) 11px(blur) 1px(spread) black;
+    </code></pre>
+    <h2>Cor da Sombra</h2>
+    <p>É interessante colocar um sombra preta e colocar uma transparência nessa cor (indicado da barra do vscode de tranparência da metade pra baixo ou menos que 50%).</p>
+    <pre><code>
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.315);
+    ou
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 32%)
+    </code></pre>
+    <h1>Border-radius/ Raio da borda</h1>
+    <p>Podemos configurar o raio da borda com border-radius. Também podemos fazer cofigurações individuais (dá pra ver no devtools):</p>
+    <pre><code>
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    </code></pre>
+    <p>Temos o shorthand deles:</p>
+    <pre><code>
+    border-radius: 10px 20px 30px 40px;
+    </code></pre>
+    <p>Podemos usar a configuração dupla, no qual o primeiro vai ser o border-top-left-radius e border-bottom-right-radius (superior esquerda e inferior direita) e o segundo os dois outros cantos (superior direita e inferior esquerda), de forma que se colocarmos 10 px no primeiro valor os cantos que terão 10 px serão espelhados:</p>
+    <pre><code>
+    border-radius: 10px 40px;
+    </code></pre>
+    <div style="background-color: chartreuse; width: 200px; height: 200px; border-radius: 10px 40px; box-shadow: 2px 2px 2px rgb(0 0 0 / 50%)"></div>
+    <p>Podemos unir os efeitos da box-shadow com border-radius.</p>
+    <h2>Bolas com border-radius</h2>
+    <p>Com border-radius podemos criar círculos:</p>
+    <pre><code>
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    </code></pre>
+    <div style="background-color: chartreuse; width: 200px; height: 200px; border-radius: 50%;"></div>
+</body>
+</html>

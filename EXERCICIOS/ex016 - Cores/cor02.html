@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+       /* Configurações globais das CSS 
+       * {height: 100%;} */
+       
+        body {
+            background-image: radial-gradient(circle,#F2C2D8,#CEE8F2 50%,#B6F2EC,#F2EAD0,#F2C8C4);
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color:crimson;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+    <p>Para fazer gradiente no fundo usa-se a declaração (css) <code>background-image</code>.</p>
+
+    <!--Gradiente Linear-->
+    <h2>Gradiente Linear</h2>
+    <p>Usamos <code>linear-gradient (a direção ou ângulo, a primeira cor, a próxima cor);</code> Exemplo:</p>
+    <p>
+        <pre>
+            <code>
+        body {
+            backgound-image: linear-gradient (to right, white, blue);
+            background-attachment: fixed;
+        }
+            </code>
+        </pre>
+    </p>
+    <p>Obs.: Em to rigth a direção pode ser colocada em graus. Ex: 90deg seria 90 graus.</p>
+    <p>Para um fundo fixo inserir <code>background-attachment: fixed;</code></p>
+    <p>Para direita usa-se <code>to right</code>, para esquerda <code>to left</code>, para cima <code>to top</code>* e para baixo <code>to bottom.</code></p>
+    <p>* o gradiente em <code>to top</code> não fica como esperado, para isso precisamos fazer uma configuração global no CSS usando o *. Veja o exemplo:</p>
+
+    <!--Configuração Global-->
+    <h2>Configuração Global</h2>
+    <p> Usa-se o * (asterisco)
+        <pre>
+            <code>
+        * { /* Confirações globais das CSS */
+            height: 100%;
+        }
+            </code>
+        </pre>
+    </p>
+    <p><del>Essa configuração global não deu certo no meu navegador</del></p>
+    
+    <!--Gradiente radial-->
+    <h2>Gradiente Radial</h2>
+    <p>Usamos o <code>radial-gradient (circle, cor1, cor2);. Podemos colocar a porcentagem de determinada cor se preferirmos.</code></p>
+    <p>
+        <pre>
+            <code>
+        body {
+            backgound-image: radial-gradient (circle, white 10%, blue);
+            background-attachment: fixed;
+        }
+            </code>
+        </pre>
+    </p>
+</body>
+</html>

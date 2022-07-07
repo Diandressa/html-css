@@ -26,15 +26,15 @@ header {
 }
 
 header h1 {
-    padding-top: 30px;
+    padding-top: 20px;
     font-variant: small-caps;
 }
 
 header p {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
-/* aside/video ------------------------ */
+/* aside/iframe ------------------------ */
 
 aside {
     height: 256px;
@@ -44,6 +44,7 @@ aside {
 }
 
 iframe{
+    width: 40%;
     position: fixed;
     right: 50px;
     box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
@@ -56,6 +57,7 @@ div#videoT {
     display: flex;
     align-items: center;
     position: absolute;
+    width: 50%;
 }
 
 #icone {
@@ -66,8 +68,10 @@ div#videoT {
 
 section {
     padding-block: 10vh;
-    padding-left: 40px;
-    line-height: 2em;
+}
+
+section p {
+    padding-block: 0.8em;
 }
 
 section.normal {
@@ -80,29 +84,21 @@ section.imagem {
     color: var(--preto-escuro);
 }
 
-section.normal article{
-    width: 350px;
-    display: inline-block;
-    margin-right: 10px;
-}
-
 section.imagem article{
     background-color: rgba(255, 255, 255, 0.445);
     color: var(--preto-escuro);
     box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
-    width: 350px;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-article.direitaT {
-    text-align: right;
 }
 
 article p:hover{
     background-color: var(--contraste);
-    transform: translateX(8px);
     border-radius: 2px;
+}
+
+article {
+    max-width: 450px;
+    text-align: right;
+    margin-inline: 5%;
 }
 
 /* rodapé ------------------------ */

@@ -8,7 +8,7 @@
     --preto-escuro: #0c0c0c;
     --fundo-branco: #f5f5f5;
     --contraste: rgb(240, 240, 240);
-    --contraste2: yellow;
+    --contraste2: hotpink;
 
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Finlandica', sans-serif;
@@ -21,6 +21,7 @@
 }
 
 html, body {
+    width: 100%;
     min-height: 100vh;
     background-color: var(--fundo-branco);
     scroll-behavior: smooth;
@@ -52,14 +53,12 @@ header p {
 
 aside {
     height: 256px;
-    position: sticky;
-    top: 0;
     /*padding-block: 10px;*/
 }
 
 iframe{
-    width: 40%;
     position: fixed;
+    width: 40%;
     right: 50px;
     box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
 }
@@ -82,8 +81,8 @@ div#videoT {
 /* seção ------------------------ */
 
 section {
+    width: 100%;
     padding-block: 10vh;
-    padding-inline: 2vh;
     font-family: var(--fonte3);
     font-size: 1.2em;    
 }
@@ -102,10 +101,12 @@ section.normal {
 section.imagem {
     background-color: hotpink;
     color: var(--preto-escuro);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.521);
+    background-size: cover;
 }
 
 section.imagem article{
-    background-color: rgba(255, 255, 255, 0.445);
+    background-color: rgba(255, 255, 255, 0.596);
     color: var(--preto-escuro);
     box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
 }
@@ -121,8 +122,26 @@ section.normal p:hover{
 
 article {
     display: inline-block;
+    width: 50%;
     text-align: right;
-    margin-inline: 45px;
+    margin-inline: 25px;
+}
+
+/* efeito parallax simples ----------------------- */
+
+section#img01{
+    background: hotpink url('../imagens/background008.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+section#img02{
+    background: hotpink url('../imagens/background001.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+section#img03{
+    background: hotpink url('../imagens/background002.jpg') center center no-repeat fixed;
+    background-size: cover;
 }
 
 /* rodapé ------------------------ */
@@ -132,15 +151,15 @@ footer {
     color: #fff;
     text-align: center;
     padding: 15px;
+    line-height: 1.5em;
+    font-family: var(--fonte2);
 }
 
 footer a, footer a:visited {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 footer a:hover {
-    transition: 0.3s;
-    font-size: 1.1em;
+    text-decoration: underline;
 }

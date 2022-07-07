@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+:root {
+    --preto-escuro: #0c0c0c;
+    --fundo-branco: #f5f5f5;
+}
+
+* {
+   margin: 0;
+   padding: 0; 
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+/* header ------------------------ */
+
+header {
+    background-color: var(--preto-escuro);
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 30px;
+    font-variant: small-caps;
+}
+
+header p {
+    padding-bottom: 30px;
+}
+
+/* seção ------------------------ */
+
+section {
+    padding-block: 10vh;
+    padding-left: 40px;
+    line-height: 2em;
+}
+
+section.normal {
+    background-color: var(--fundo-branco);
+    color: var(--preto-escuro);
+}
+
+section.imagem {
+    background-color: hotpink;
+    color: var(--preto-escuro);
+}
+
+section.imagem p {
+    background-color: rgba(255, 255, 255, 0.623);
+    color: var(--preto-escuro);
+    box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
+    width: 400px;
+}
+
+/* rodapé ------------------------ */
+
+footer {
+    background-color: var(--preto-escuro);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a, footer a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    transition: 0.3s;
+    font-size: 1.1em;
+}

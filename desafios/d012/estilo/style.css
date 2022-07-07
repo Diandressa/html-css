@@ -4,6 +4,7 @@
     --preto-escuro: #0c0c0c;
     --fundo-branco: #f5f5f5;
     --contraste: rgb(240, 240, 240);
+    --contraste2: yellow;
 }
 
 * {
@@ -90,8 +91,13 @@ section.imagem article{
     box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
 }
 
-article p:hover{
+section.imagem p:hover{
     background-color: var(--contraste);
+    border-radius: 2px;
+}
+
+section.normal p:hover{
+    background-color: var(--contraste2);
     border-radius: 2px;
 }
 

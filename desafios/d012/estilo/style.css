@@ -3,6 +3,7 @@
 :root {
     --preto-escuro: #0c0c0c;
     --fundo-branco: #f5f5f5;
+    --contraste: rgb(240, 240, 240);
 }
 
 * {
@@ -12,7 +13,8 @@
 
 html, body {
     min-height: 100vh;
-    background-color: darkgray;
+    background-color: var(--fundo-branco);
+    scroll-behavior: smooth;
 }
 
 /* header ------------------------ */
@@ -30,6 +32,34 @@ header h1 {
 
 header p {
     padding-bottom: 30px;
+}
+
+/* aside/video ------------------------ */
+
+aside {
+    height: 256px;
+    position: sticky;
+    top: 0;
+    /*padding-block: 10px;*/
+}
+
+iframe{
+    position: fixed;
+    right: 50px;
+    box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
+}
+
+div#videoT {
+    height: 256px;
+    font-size: 2em;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+#icone {
+    margin-left: 20px;
 }
 
 /* seção ------------------------ */
@@ -50,11 +80,29 @@ section.imagem {
     color: var(--preto-escuro);
 }
 
-section.imagem p {
-    background-color: rgba(255, 255, 255, 0.623);
+section.normal article{
+    width: 350px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+section.imagem article{
+    background-color: rgba(255, 255, 255, 0.445);
     color: var(--preto-escuro);
     box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.425);
-    width: 400px;
+    width: 350px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+article.direitaT {
+    text-align: right;
+}
+
+article p:hover{
+    background-color: var(--contraste);
+    transform: translateX(8px);
+    border-radius: 2px;
 }
 
 /* rodapé ------------------------ */

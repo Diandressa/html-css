@@ -20,9 +20,26 @@
         padding: 10px;
        }
 
+       caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: rgb(16, 95, 78);
+        color: white;
+       }
+
        thead, tfoot{
         background-color: gray;
         color: white;
+       }
+
+       tbody tr:nth-child(even){ /* ou (2n) => de 2 em dois tr acrescenta o estilo.*/
+        background-color: #8cb39e;
+        font-weight: bold;
+       }
+
+       tbody tr:nth-child(odd){/* ou (2n-1)  Posso usar o par(even) e ímpar(odd)*/
+        background-color: #cbf3e6;
        }
 
        td.num{
@@ -35,6 +52,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!-- ANATOMIA PARA TABELAS GRANDES
     TABLE
+        CAPTION
         THEAD
             TR, TD, TH
         TBODY
@@ -43,10 +61,11 @@
             TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th><!-- cop: os dados irão ser dessa coluna (html semântico - análise dos mecânismos de buscas)-->
+                <th scope="col" style="width:50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -90,10 +109,38 @@
                 <td>Santa Catarina</td>
                 <td class="num">6.248.436</td>
             </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6.003.788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6.574.789</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3.483.985</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.514.952</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3.766.528</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3.035.122</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3.168.027</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total Habitantes</th>
+                <th scope="row">Total Habitantes</th><!-- título da linha: row (os dados vão ser relacionados com essa linha)-->
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
